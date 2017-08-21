@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculator Options View Controller-->
         <scene sceneID="r5r-yG-7yb">
             <objects>
-                <viewController id="WTB-1u-3rk" sceneMemberID="viewController">
+                <viewController id="WTB-1u-3rk" customClass="F4CalculatorOptionsViewController" customModule="F4_sales_app_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gYw-AC-w6P"/>
                         <viewControllerLayoutGuide type="bottom" id="twF-lt-TQ0"/>
@@ -20,20 +21,94 @@
                     <view key="view" contentMode="scaleToFill" id="0qg-fB-4rO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="KjD-Jd-EDR" userLabel="Background Image View">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6e-uF-uZg" userLabel="Background Image Mask">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="f4_round_logo" translatesAutoresizingMaskIntoConstraints="NO" id="eLq-Xg-wjq">
+                                        <rect key="frame" x="147" y="32" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="eLq-Xg-wjq" secondAttribute="height" multiplier="1:1" id="6yz-vg-cCX"/>
+                                            <constraint firstAttribute="width" constant="80" id="jj2-g5-V9g">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvc-OM-z9Z" customClass="F4RoundedButton" customModule="F4_sales_app_IOS" customModuleProvider="target">
+                                        <rect key="frame" x="87" y="262" width="200" height="50"/>
+                                        <color key="backgroundColor" red="0.93585479260000004" green="0.5335893035" blue="0.1999401301" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="1sb-Wn-bZH">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="50" id="TXa-1M-6Y5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Budget"/>
+                                        <connections>
+                                            <action selector="budgetTapped:" destination="WTB-1u-3rk" eventType="touchUpInside" id="2zN-ou-da4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cl-vH-hfe" customClass="F4RoundedButton" customModule="F4_sales_app_IOS" customModuleProvider="target">
+                                        <rect key="frame" x="87" y="344" width="200" height="50"/>
+                                        <color key="backgroundColor" red="0.93585479260000004" green="0.5335893035" blue="0.1999401301" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Bx4-x7-2z4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Impressions"/>
+                                        <connections>
+                                            <action selector="impressionsTapped:" destination="WTB-1u-3rk" eventType="touchUpInside" id="05k-lI-INH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="1cl-vH-hfe" firstAttribute="width" secondItem="lvc-OM-z9Z" secondAttribute="width" id="G4m-7w-lea"/>
+                                    <constraint firstItem="eLq-Xg-wjq" firstAttribute="top" secondItem="R6e-uF-uZg" secondAttribute="top" constant="32" id="IkC-R4-oYQ">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="64"/>
+                                    </constraint>
+                                    <constraint firstItem="1cl-vH-hfe" firstAttribute="top" secondItem="lvc-OM-z9Z" secondAttribute="bottom" constant="32" id="M87-LD-sTB">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="64"/>
+                                    </constraint>
+                                    <constraint firstItem="1cl-vH-hfe" firstAttribute="centerX" secondItem="lvc-OM-z9Z" secondAttribute="centerX" id="VgE-LT-ngK"/>
+                                    <constraint firstItem="lvc-OM-z9Z" firstAttribute="top" secondItem="eLq-Xg-wjq" secondAttribute="bottom" constant="150" id="WlS-hk-7NK"/>
+                                    <constraint firstItem="lvc-OM-z9Z" firstAttribute="centerX" secondItem="eLq-Xg-wjq" secondAttribute="centerX" id="l7R-TB-DJV"/>
+                                    <constraint firstItem="eLq-Xg-wjq" firstAttribute="centerX" secondItem="R6e-uF-uZg" secondAttribute="centerX" id="udj-Ls-TFj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R6e-uF-uZg" firstAttribute="top" secondItem="gYw-AC-w6P" secondAttribute="bottom" id="9ri-nG-UPd"/>
+                            <constraint firstAttribute="trailing" secondItem="R6e-uF-uZg" secondAttribute="trailing" id="GDh-xS-RPt"/>
+                            <constraint firstItem="twF-lt-TQ0" firstAttribute="top" secondItem="KjD-Jd-EDR" secondAttribute="bottom" id="LL4-Qe-rOM"/>
+                            <constraint firstItem="KjD-Jd-EDR" firstAttribute="top" secondItem="gYw-AC-w6P" secondAttribute="bottom" id="PF8-wQ-Iel"/>
+                            <constraint firstAttribute="trailing" secondItem="KjD-Jd-EDR" secondAttribute="trailing" id="SJT-xl-2kr"/>
+                            <constraint firstAttribute="bottom" secondItem="R6e-uF-uZg" secondAttribute="bottom" id="XK1-qB-G8y"/>
+                            <constraint firstItem="R6e-uF-uZg" firstAttribute="leading" secondItem="0qg-fB-4rO" secondAttribute="leading" id="lDN-aK-vRr"/>
+                            <constraint firstItem="KjD-Jd-EDR" firstAttribute="leading" secondItem="0qg-fB-4rO" secondAttribute="leading" id="yHj-nN-hpy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7SG-la-bgi"/>
+                    <connections>
+                        <outlet property="budgetButton" destination="lvc-OM-z9Z" id="OKN-z1-dO2"/>
+                        <outlet property="impressionsButton" destination="1cl-vH-hfe" id="WIm-YU-PT1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xEO-Od-kCt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1103.2" y="146.17691154422789"/>
+            <point key="canvasLocation" x="1006" y="146"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R6G-dy-cCt">
             <objects>
                 <navigationController storyboardIdentifier="F4CalculatorNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="j1D-7i-cTY" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="itt-3e-NvP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="itt-3e-NvP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -46,5 +121,97 @@
             </objects>
             <point key="canvasLocation" x="164" y="146.17691154422789"/>
         </scene>
+        <!--Calculator View Controller-->
+        <scene sceneID="5tT-UP-hbV">
+            <objects>
+                <viewController storyboardIdentifier="F4CalculatorViewController" id="ohD-ng-F9a" customClass="F4CalculatorViewController" customModule="F4_sales_app_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yeb-2i-d6g"/>
+                        <viewControllerLayoutGuide type="bottom" id="FhH-du-evk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DLU-tz-fbR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZP-CC-Mag">
+                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1c-Y5-4gv" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="AWJ-45-QaB"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7WM-QS-WKF">
+                                        <rect key="frame" x="32" y="16" width="107.5" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="2E0-iZ-uiC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                        <color key="textColor" red="0.93585479260000004" green="0.5335893035" blue="0.1999401301" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$350" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osm-ex-Nxn">
+                                        <rect key="frame" x="155.5" y="26.5" width="44" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h94-d2-5G5" userLabel="Seperator View">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="GIa-lm-RnP"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXM-uv-BEu" customClass="F4RoundedButton" customModule="F4_sales_app_IOS" customModuleProvider="target">
+                                        <rect key="frame" x="75" y="898" width="225" height="50"/>
+                                        <color key="backgroundColor" red="0.93585479260000004" green="0.5335893035" blue="0.1999401301" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="225" id="9mm-YG-KEy"/>
+                                            <constraint firstAttribute="height" constant="50" id="kmC-Vj-uZ5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Submit"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="h94-d2-5G5" firstAttribute="leading" secondItem="FZP-CC-Mag" secondAttribute="leading" id="3CH-ju-sVM"/>
+                                    <constraint firstItem="Osm-ex-Nxn" firstAttribute="leading" secondItem="7WM-QS-WKF" secondAttribute="trailing" constant="16" id="5BA-4F-fdQ"/>
+                                    <constraint firstItem="7WM-QS-WKF" firstAttribute="leading" secondItem="FZP-CC-Mag" secondAttribute="leading" constant="32" id="5ik-4e-F32"/>
+                                    <constraint firstAttribute="bottom" secondItem="i1c-Y5-4gv" secondAttribute="bottom" id="Bjh-PE-oid"/>
+                                    <constraint firstItem="i1c-Y5-4gv" firstAttribute="leading" secondItem="FZP-CC-Mag" secondAttribute="leading" id="Ca3-T5-rlg"/>
+                                    <constraint firstAttribute="trailing" secondItem="i1c-Y5-4gv" secondAttribute="trailing" id="Nvv-9W-wL6"/>
+                                    <constraint firstItem="Osm-ex-Nxn" firstAttribute="centerY" secondItem="7WM-QS-WKF" secondAttribute="centerY" constant="3" id="ODD-t2-hHZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="h94-d2-5G5" secondAttribute="trailing" id="R3f-Cn-XLr"/>
+                                    <constraint firstItem="i1c-Y5-4gv" firstAttribute="top" secondItem="FZP-CC-Mag" secondAttribute="top" id="eCp-AW-4FN"/>
+                                    <constraint firstItem="h94-d2-5G5" firstAttribute="top" secondItem="7WM-QS-WKF" secondAttribute="bottom" constant="4" id="lcn-wf-ALx"/>
+                                    <constraint firstAttribute="bottom" secondItem="eXM-uv-BEu" secondAttribute="bottom" constant="52" id="pzs-NX-cqA"/>
+                                    <constraint firstItem="7WM-QS-WKF" firstAttribute="top" secondItem="FZP-CC-Mag" secondAttribute="top" constant="16" id="w30-yE-w6X"/>
+                                    <constraint firstItem="eXM-uv-BEu" firstAttribute="centerX" secondItem="FZP-CC-Mag" secondAttribute="centerX" id="ybx-3S-wcL"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FhH-du-evk" firstAttribute="top" secondItem="FZP-CC-Mag" secondAttribute="bottom" id="GO3-mI-95H"/>
+                            <constraint firstItem="FZP-CC-Mag" firstAttribute="leading" secondItem="DLU-tz-fbR" secondAttribute="leading" id="eTx-JN-MaY"/>
+                            <constraint firstAttribute="trailing" secondItem="FZP-CC-Mag" secondAttribute="trailing" id="fnP-Zz-IP3"/>
+                            <constraint firstItem="i1c-Y5-4gv" firstAttribute="width" secondItem="DLU-tz-fbR" secondAttribute="width" id="iMz-3v-jq1"/>
+                            <constraint firstItem="FZP-CC-Mag" firstAttribute="top" secondItem="Yeb-2i-d6g" secondAttribute="bottom" id="yyc-Bq-soZ"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ryn-pw-TsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1986" y="296"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="banner_placeholder" width="1260" height="1871"/>
+        <image name="f4_round_logo" width="512" height="512"/>
+    </resources>
 </document>

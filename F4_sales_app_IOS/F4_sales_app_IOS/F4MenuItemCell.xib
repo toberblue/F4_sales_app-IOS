@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="F4MenuItemCell" rowHeight="65" id="xpg-oE-A6S" customClass="F4MenuItemCell" customModule="F4_user_app_IOS" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="F4MenuItemCell" rowHeight="65" id="xpg-oE-A6S" customClass="F4MenuItemCell" customModule="F4_sales_app_IOS" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="371" height="65"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xpg-oE-A6S" id="GtV-E1-q9s">
@@ -19,14 +20,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ilq-RT-foq">
-                        <rect key="frame" x="15" y="12.5" width="40" height="40"/>
+                        <rect key="frame" x="32" y="12.5" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="GPN-3J-RiL"/>
                             <constraint firstAttribute="height" constant="40" id="rHo-D1-uos"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="5xx-sJ-SxT">
-                        <rect key="frame" x="70" y="19.5" width="177.5" height="26.5"/>
+                        <rect key="frame" x="92" y="19.5" width="155.5" height="26.5"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -34,10 +35,10 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="5xx-sJ-SxT" firstAttribute="leading" secondItem="ilq-RT-foq" secondAttribute="trailing" constant="15" id="A6u-SY-Lbr"/>
+                    <constraint firstItem="5xx-sJ-SxT" firstAttribute="leading" secondItem="ilq-RT-foq" secondAttribute="trailing" constant="20" id="A6u-SY-Lbr"/>
                     <constraint firstItem="5xx-sJ-SxT" firstAttribute="centerY" secondItem="ilq-RT-foq" secondAttribute="centerY" id="Ogd-Pb-Eia"/>
                     <constraint firstItem="ilq-RT-foq" firstAttribute="centerY" secondItem="GtV-E1-q9s" secondAttribute="centerY" id="SVA-Oh-62Z"/>
-                    <constraint firstItem="ilq-RT-foq" firstAttribute="leading" secondItem="GtV-E1-q9s" secondAttribute="leading" constant="15" id="n8J-dp-LRt"/>
+                    <constraint firstItem="ilq-RT-foq" firstAttribute="leading" secondItem="GtV-E1-q9s" secondAttribute="leading" constant="32" id="n8J-dp-LRt"/>
                     <constraint firstAttribute="centerX" secondItem="5xx-sJ-SxT" secondAttribute="trailing" multiplier="0.75" id="uNv-PR-aMg"/>
                 </constraints>
             </tableViewCellContentView>

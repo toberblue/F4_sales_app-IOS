@@ -61,7 +61,7 @@ class F4MenuManager: NSObject,SSASideMenuDelegate {
   }
   
   func loadCalculatorViewController() {
-    let homeVC = Constants.Storyboards.Main.storyboard.instantiateViewController(withIdentifier: Constants.Storyboards.Calculator.calculatorNavVC) as! UINavigationController
+    let homeVC = Constants.Storyboards.Calculator.storyboard.instantiateViewController(withIdentifier: Constants.Storyboards.Calculator.calculatorNavVC) as! UINavigationController
     updateContentVC(contentVC: homeVC)
   }
   

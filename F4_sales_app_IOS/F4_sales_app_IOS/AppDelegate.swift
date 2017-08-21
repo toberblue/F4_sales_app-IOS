@@ -16,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    customUISetup()
+    
+    window = UIWindow(frame: UIScreen.main.bounds)
+    window?.rootViewController = F4MenuManager.sharedManager.instantiateSideMenu(shouldLoadHome: true)
+    window?.makeKeyAndVisible()
     return true
   }
 
@@ -42,6 +46,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     self.saveContext()
+  }
+  
+  func customUISetup() {
+    // Set up important UI Constants, such as color etc
+    
+    //    let font: UIFont = UIFont(name: Constants.CoreSans.NRSC45Regular, size: 18.0)!
+    UINavigationBar.appearance().barStyle  = UIBarStyle.black
+    UINavigationBar.appearance().tintColor = Constants.Colors.mainWhite
+    
+    UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName: Constants.Fonts.mainBold]
+    UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName:Constants.Fonts.SF.regular], for: UIControlState())
+    
+    UINavigationBar.appearance().isTranslucent = false
+    UINavigationBar.appearance().barTintColor = Constants.Colors.mainOrange
+    UINavigationBar.appearance().backgroundColor = Constants.Colors.mainOrange
   }
 
   // MARK: - Core Data stack

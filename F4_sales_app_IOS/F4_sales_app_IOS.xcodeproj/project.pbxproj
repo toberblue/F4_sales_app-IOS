@@ -45,6 +45,8 @@
 		67CDD80E1F4A847E00868E3B /* F4MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CDD80D1F4A847E00868E3B /* F4MenuManager.swift */; };
 		67CDD8101F4A8D7000868E3B /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67CDD80F1F4A8D7000868E3B /* Calculator.storyboard */; };
 		67CDD8121F4A8DDE00868E3B /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67CDD8111F4A8DDE00868E3B /* SignIn.storyboard */; };
+		67CDD8151F4A8F6100868E3B /* F4CalculatorOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CDD8141F4A8F6100868E3B /* F4CalculatorOptionsViewController.swift */; };
+		67CDD8171F4A994D00868E3B /* F4CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CDD8161F4A994D00868E3B /* F4CalculatorViewController.swift */; };
 		A2CE1D0F168BE9B84682921C /* Pods_F4_sales_app_IOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A17D8F56FBA6622C3B4B0C /* Pods_F4_sales_app_IOSTests.framework */; };
 		C5C894C36E5E1C7AB0C4695B /* Pods_F4_sales_app_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 793417BB7DA190F48E532086 /* Pods_F4_sales_app_IOS.framework */; };
 /* End PBXBuildFile section */
@@ -106,6 +108,8 @@
 		67CDD80D1F4A847E00868E3B /* F4MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = F4MenuManager.swift; sourceTree = "<group>"; };
 		67CDD80F1F4A8D7000868E3B /* Calculator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
 		67CDD8111F4A8DDE00868E3B /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		67CDD8141F4A8F6100868E3B /* F4CalculatorOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = F4CalculatorOptionsViewController.swift; sourceTree = "<group>"; };
+		67CDD8161F4A994D00868E3B /* F4CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = F4CalculatorViewController.swift; sourceTree = "<group>"; };
 		793417BB7DA190F48E532086 /* Pods_F4_sales_app_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_F4_sales_app_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B48F2B6B7B51A645691E398 /* Pods-F4_sales_app_IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-F4_sales_app_IOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-F4_sales_app_IOS/Pods-F4_sales_app_IOS.release.xcconfig"; sourceTree = "<group>"; };
 		B1A0DE363199C45F2D4F782A /* Pods-F4_sales_app_IOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-F4_sales_app_IOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-F4_sales_app_IOSTests/Pods-F4_sales_app_IOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,8 +197,9 @@
 			isa = PBXGroup;
 			children = (
 				67CDD7ED1F4A835000868E3B /* Base Controllers */,
-				67CDD7F21F4A837100868E3B /* Login */,
 				67CDD8001F4A841600868E3B /* Reveal Menu */,
+				67CDD8131F4A8F3E00868E3B /* Calculator */,
+				67CDD7F21F4A837100868E3B /* Login */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -310,6 +315,15 @@
 				67CDD80B1F4A845E00868E3B /* SSASideMenu.swift */,
 			);
 			name = "External Libraries";
+			sourceTree = "<group>";
+		};
+		67CDD8131F4A8F3E00868E3B /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				67CDD8141F4A8F6100868E3B /* F4CalculatorOptionsViewController.swift */,
+				67CDD8161F4A994D00868E3B /* F4CalculatorViewController.swift */,
+			);
+			name = Calculator;
 			sourceTree = "<group>";
 		};
 		7A6A151618806B0667DAFFAF /* Pods */ = {
@@ -545,6 +559,7 @@
 				67CDD7CB1F4A820400868E3B /* F4UserManager.swift in Sources */,
 				67CDD80E1F4A847E00868E3B /* F4MenuManager.swift in Sources */,
 				67CDD80C1F4A845E00868E3B /* SSASideMenu.swift in Sources */,
+				67CDD8171F4A994D00868E3B /* F4CalculatorViewController.swift in Sources */,
 				67CDD7F61F4A838D00868E3B /* F4LoginDetailsViewController.swift in Sources */,
 				67CDD7D61F4A825C00868E3B /* F4ShopPreviewModel.swift in Sources */,
 				67CDD7A71F4A7F8500868E3B /* F4_sales_app_IOS.xcdatamodeld in Sources */,
@@ -568,6 +583,7 @@
 				67CDD7EB1F4A830400868E3B /* UIView+Layer.swift in Sources */,
 				67CDD7C91F4A81E900868E3B /* Constants.swift in Sources */,
 				67CDD7D81F4A825C00868E3B /* F4CardModel.swift in Sources */,
+				67CDD8151F4A8F6100868E3B /* F4CalculatorOptionsViewController.swift in Sources */,
 				67CDD7DA1F4A825C00868E3B /* F4InfoModel.swift in Sources */,
 				67CDD7E81F4A830400868E3B /* String+Validation.swift in Sources */,
 				67CDD8071F4A842700868E3B /* F4MenuItemCell.swift in Sources */,

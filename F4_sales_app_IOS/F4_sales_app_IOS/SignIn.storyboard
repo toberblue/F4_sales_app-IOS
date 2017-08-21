@@ -42,21 +42,11 @@
                                                     <constraint firstAttribute="width" secondItem="oJy-dL-bd1" secondAttribute="height" multiplier="1:1" id="q45-tB-B2P"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smZ-FD-wrj">
-                                                <rect key="frame" x="16" y="16" width="35" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="35" id="aMc-le-Kv8"/>
-                                                    <constraint firstAttribute="height" constant="35" id="jB9-Ge-bcJ"/>
-                                                </constraints>
-                                                <state key="normal" image="F4_Logo"/>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="oJy-dL-bd1" firstAttribute="height" secondItem="cKI-Py-d58" secondAttribute="height" multiplier="0.9" id="70P-mf-sPg"/>
                                             <constraint firstItem="oJy-dL-bd1" firstAttribute="centerY" secondItem="cKI-Py-d58" secondAttribute="centerY" id="81H-7O-3ca"/>
-                                            <constraint firstItem="smZ-FD-wrj" firstAttribute="top" secondItem="cKI-Py-d58" secondAttribute="top" constant="16" id="HFR-ZN-ZJM"/>
-                                            <constraint firstItem="smZ-FD-wrj" firstAttribute="leading" secondItem="cKI-Py-d58" secondAttribute="leading" constant="16" id="Vxm-ml-Q3o"/>
                                             <constraint firstItem="oJy-dL-bd1" firstAttribute="centerX" secondItem="cKI-Py-d58" secondAttribute="centerX" id="WKI-NC-ZE4"/>
                                         </constraints>
                                     </view>
@@ -98,7 +88,6 @@
                         <outlet property="backgroundImageView" destination="IhE-ts-ztH" id="82A-Fv-EfM"/>
                         <outlet property="contentWrapper" destination="2wr-xR-uxe" id="6Me-Pw-BjA"/>
                         <outlet property="contentWrapperTopConstraint" destination="3ic-ma-hbk" id="BDU-gz-9E9"/>
-                        <outlet property="dismissButton" destination="smZ-FD-wrj" id="o8N-Bw-nIY"/>
                         <outlet property="loginContainerView" destination="yMZ-3n-DKR" id="cnY-sm-gEb"/>
                     </connections>
                 </viewController>
@@ -128,7 +117,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vl1-gk-OB1" customClass="F4RoundedButton" customModule="F4_sales_app_IOS" customModuleProvider="target">
-                                <rect key="frame" x="75" y="542" width="225" height="50"/>
+                                <rect key="frame" x="87.5" y="542" width="200" height="50"/>
                                 <color key="backgroundColor" red="0.93585479260000004" green="0.5335893035" blue="0.1999401301" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="iPm-jv-OlX"/>
@@ -140,9 +129,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jge-gA-QbY" customClass="F4RoundedButton" customModule="F4_sales_app_IOS" customModuleProvider="target">
-                                <rect key="frame" x="75.5" y="477" width="225" height="50"/>
+                                <rect key="frame" x="88" y="477" width="200" height="50"/>
                                 <color key="backgroundColor" red="0.93585479260000004" green="0.5335893035" blue="0.1999401301" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="JlK-Ze-93o"/>
                                     <constraint firstAttribute="height" constant="50" id="xPb-i6-36I"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -151,11 +141,14 @@
                                     <action selector="signInTapped:" destination="Q0l-xc-0SE" eventType="touchUpInside" id="Mvs-Is-s3V"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username or Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="052-f9-Mab" customClass="F4RoundedTextField" customModule="F4_sales_app_IOS" customModuleProvider="target">
-                                <rect key="frame" x="47" y="70" width="281" height="50"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username or Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="052-f9-Mab" customClass="F4RoundedTextField" customModule="F4_sales_app_IOS" customModuleProvider="target">
+                                <rect key="frame" x="88" y="70" width="200" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="HCs-1M-yBn"/>
+                                    <constraint firstAttribute="width" constant="200" id="m88-kx-9uw">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                    </constraint>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -165,8 +158,8 @@
                                     <outlet property="delegate" destination="Q0l-xc-0SE" id="8A5-iF-eka"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T5c-Yr-2ys" customClass="F4RoundedTextField" customModule="F4_sales_app_IOS" customModuleProvider="target">
-                                <rect key="frame" x="47" y="135" width="281" height="50"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T5c-Yr-2ys" customClass="F4RoundedTextField" customModule="F4_sales_app_IOS" customModuleProvider="target">
+                                <rect key="frame" x="88" y="135" width="200" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="LKM-ap-oEc"/>
@@ -188,7 +181,6 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jge-gA-QbY" firstAttribute="width" secondItem="JSd-E6-fWU" secondAttribute="width" multiplier="0.6" id="9eN-pp-Pry"/>
                             <constraint firstItem="Vl1-gk-OB1" firstAttribute="width" secondItem="jge-gA-QbY" secondAttribute="width" id="9rL-2V-gdg"/>
                             <constraint firstItem="T5c-Yr-2ys" firstAttribute="top" secondItem="052-f9-Mab" secondAttribute="bottom" constant="15" id="Inw-N2-j7o"/>
                             <constraint firstItem="T5c-Yr-2ys" firstAttribute="width" secondItem="052-f9-Mab" secondAttribute="width" id="L6h-UG-Lor"/>
@@ -201,8 +193,9 @@
                             <constraint firstItem="jge-gA-QbY" firstAttribute="centerX" secondItem="JSd-E6-fWU" secondAttribute="centerX" id="dBd-JX-wjN"/>
                             <constraint firstItem="T5c-Yr-2ys" firstAttribute="centerX" secondItem="052-f9-Mab" secondAttribute="centerX" id="gEE-5w-KnH"/>
                             <constraint firstItem="rIc-9i-cQ2" firstAttribute="top" secondItem="Vl1-gk-OB1" secondAttribute="bottom" priority="750" constant="30" id="gtX-As-e39"/>
-                            <constraint firstItem="052-f9-Mab" firstAttribute="top" secondItem="eCD-nj-VF3" secondAttribute="bottom" constant="50" id="q63-Pa-7tx"/>
-                            <constraint firstItem="052-f9-Mab" firstAttribute="width" secondItem="JSd-E6-fWU" secondAttribute="width" multiplier="0.75" id="r2N-O3-uvG"/>
+                            <constraint firstItem="052-f9-Mab" firstAttribute="top" secondItem="eCD-nj-VF3" secondAttribute="bottom" constant="50" id="q63-Pa-7tx">
+                                <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                            </constraint>
                             <constraint firstItem="Vl1-gk-OB1" firstAttribute="centerX" secondItem="JSd-E6-fWU" secondAttribute="centerX" id="yfb-md-efl"/>
                         </constraints>
                     </view>

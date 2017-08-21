@@ -64,7 +64,8 @@ struct Constants {
       static let storyboard = UIStoryboard(name: "Calculator", bundle: nil)
       
       // Navigation & VCs
-      static let calculatorNavVC = "F4CalculatorNavigationController"
+      static let calculatorNavVC  = "F4CalculatorNavigationController"
+      static let calculatorVC     = "F4CalculatorViewController"
     }
     
     struct SignIn {

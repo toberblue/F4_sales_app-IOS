@@ -74,11 +74,11 @@ class F4LoginDetailsViewController: F4BaseViewController {
   }
   
   @IBAction func signUpTapped(_ sender: Any) {
-    loginDelegate?.shouldPresentSignUp()
+    //loginDelegate?.shouldPresentSignUp()
   }
   
   @IBAction func forgotTapped(_ sender: Any) {
-    loginDelegate?.shouldPresentForgot()
+    //loginDelegate?.shouldPresentForgot()
   }
   
   override func didReceiveMemoryWarning() {
