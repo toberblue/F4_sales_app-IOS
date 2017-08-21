@@ -1,7 +1,2 @@
-# hello_world
-Learning the ropes
-My name is Peter Matthews and I am learning how to use GitHub
-
-Now I am adding some more text to this file
-
-And on Tuesday evening I have added yet more text
+# F4_sales_app_IOS
+An companion application to assist the sales process
