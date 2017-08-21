@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.5.0)
+  - DZNEmptyDataSet (1.8.1)
+  - FontAwesome.swift (1.2.0)
+  - PKHUD (4.2.3)
+  - SwiftyJSON (3.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - DZNEmptyDataSet
+  - FontAwesome.swift
+  - PKHUD (~> 4.0)
+  - SwiftyJSON (= 3.0.0)
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  FontAwesome.swift: 60063e3f19ba4801155d4b0f2334ab7585763ab3
+  PKHUD: c7692163a09875cbf15827dc581df3c5cf7f1015
+  SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
+
+PODFILE CHECKSUM: b671b7fa3b4d9fd1b2ca9b772d57212239a3b5b4
+
+COCOAPODS: 1.2.0.beta.1

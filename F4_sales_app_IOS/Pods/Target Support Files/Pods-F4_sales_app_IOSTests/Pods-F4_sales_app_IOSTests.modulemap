@@ -1,0 +1,6 @@
+framework module Pods_F4_sales_app_IOSTests {
+  umbrella header "Pods-F4_sales_app_IOSTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

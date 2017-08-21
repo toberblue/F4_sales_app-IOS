@@ -1,0 +1,28 @@
+platform :ios, '9.0'
+
+use_frameworks!
+
+def common_pods
+  pod 'SwiftyJSON', '3.0.0'
+  pod 'FontAwesome.swift'
+  pod 'Alamofire', '~> 4.4'
+  pod 'PKHUD', '~> 4.0'
+  pod 'DZNEmptyDataSet'
+end
+
+target 'F4_sales_app_IOS' do
+  common_pods
+end
+
+target 'F4_sales_app_IOSTests' do
+  common_pods
+end
+
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '3.0'
+        end
+    end
+end
