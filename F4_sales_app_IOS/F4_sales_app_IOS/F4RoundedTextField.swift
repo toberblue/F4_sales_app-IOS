@@ -10,7 +10,7 @@ import UIKit
 
 class F4RoundedTextField: UITextField {
   
-  var currentColorScheme: F4UIColorScheme = .white {
+  var currentColorScheme: F4UIColorScheme = .orange {
     didSet {
       updateColorScheme(withScheme: currentColorScheme)
     }

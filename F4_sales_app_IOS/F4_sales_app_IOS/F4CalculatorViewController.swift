@@ -10,10 +10,16 @@ import UIKit
 
 class F4CalculatorViewController: F4BaseViewController {
   
+  @IBOutlet weak var budgetTextField: F4RoundedTextField!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     // Do any additional setup after loading the view.
+  }
+  
+  private func setupUI() {
+    
   }
 
 }
